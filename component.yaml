@@ -1,0 +1,58 @@
+platform: Common
+buildPlatform: ReactNative
+displayName: Appcircle CodePush
+description: "Release a React Native update to Appcircle CodePush."
+inputs:
+- key: "AC_REPOSITORY_DIR"
+  defaultValue: "$AC_REPOSITORY_DIR"
+  isRequired: true
+  title: Repository Directory
+  description: "Relative path of the React Native project."
+  helpText:
+- key: "AC_CODE_PUSH_TOKEN"
+  defaultValue: "$AC_CODE_PUSH_TOKEN"
+  isRequired: true
+  title: Appcircle API Token
+  description: "App Center API Token."
+  helpText:
+- key: "AC_CODE_PUSH_APP_NAME"
+  defaultValue: "$AC_CODE_PUSH_APP_NAME"
+  isRequired: true
+  title: App Name
+  description: "This parameter specifies the name of the app in Appcircle. For example `MyApp-Android`."
+  helpText:
+- key: "AC_CODE_PUSH_DEPLOYMENT_NAME"
+  defaultValue: "$AC_CODE_PUSH_DEPLOYMENT_NAME"
+  isRequired: true
+  title: Deployment Name
+  description: "This parameter specifies which deployment you want to release the update to. For example `Staging`."
+  helpText:
+- key: "AC_CODE_PUSH_TARGET_BINARY_VERSION"
+  defaultValue: "$AC_CODE_PUSH_TARGET_BINARY_VERSION"
+  isRequired: true
+  title: CodePush Target Binary Version
+  description: "This parameter specifies the target binary version of the app that this update is intended for. It should be in the format `1.0.0`."
+  helpText:
+- key: "AC_CODE_PUSH_DESCRIPTION"
+  defaultValue: "$AC_CODE_PUSH_DESCRIPTION"
+  isRequired: false
+  title: Description
+  description: "This parameter provides an optional change log for the deployment."
+  helpText:
+- key: "AC_CODE_PUSH_ROLLOUT_PERCENTAGE"
+  defaultValue: "$AC_CODE_PUSH_ROLLOUT_PERCENTAGE"
+  isRequired: false
+  title: Rollout Percentage
+  description: "This parameter specifies the percentage of users (as an integer between 1 and 100) that should be eligible to receive this update."
+  helpText:
+- key: "AC_CODE_PUSH_EXTRA_ARGUMENTS"
+  defaultValue: "$AC_CODE_PUSH_EXTRA_ARGUMENTS"
+  isRequired: false
+  title: Extra arguments
+  description: "Extra command line arguments for Appcircle. For example, add `--debug` for verbose logs."
+  helpText:
+outputs:
+processFilename: ruby
+processArguments: '%AC_STEP_TEMP%/main.rb'
+files:
+- "main.rb"
