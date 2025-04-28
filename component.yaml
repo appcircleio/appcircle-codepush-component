@@ -12,14 +12,14 @@ inputs:
 - key: "AC_CODE_PUSH_TOKEN"
   defaultValue: "$AC_CODE_PUSH_TOKEN"
   isRequired: true
-  title: Appcircle API Token
-  description: "App Center API Token."
+  title: Appcircle Personal Access Token
+  description: "Appcircle personal access token. You can create a new token in the Appcircle dashboard under `Settings > Security > Personal Access Token`."
   helpText:
 - key: "AC_CODE_PUSH_APP_NAME"
   defaultValue: "$AC_CODE_PUSH_APP_NAME"
   isRequired: true
   title: App Name
-  description: "This parameter specifies the name of the app in Appcircle. For example `MyApp-Android`."
+  description: "This parameter specifies the name of the app in Appcircle. For example `MyApp-Android` or `MyApp-iOS`."
   helpText:
 - key: "AC_CODE_PUSH_DEPLOYMENT_NAME"
   defaultValue: "$AC_CODE_PUSH_DEPLOYMENT_NAME"
