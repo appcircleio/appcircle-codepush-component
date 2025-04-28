@@ -1,5 +1,6 @@
 require 'pathname'
 require 'fileutils'
+require 'open3'
 
 def get_env_variable(key)
   ENV[key].nil? || ENV[key] == '' ? nil : ENV[key]
