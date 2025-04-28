@@ -17,13 +17,13 @@ inputs:
   helpText:
 - key: "AC_CODE_PUSH_SERVER_URL"
   defaultValue: "$AC_CODE_PUSH_SERVER_URL"
-  isRequired: true
+  isRequired: false
   title: Appcircle CodePush Server URL
   description: "Appcircle CodePush server URL. Leave it empty if you do not use self-hosted server."
   helpText:
 - key: "AC_CODE_PUSH_AUTH_URL"
   defaultValue: "$AC_CODE_PUSH_AUTH_URL"
-  isRequired: true
+  isRequired: false
   title: Appcircle CodePush Auth URL
   description: "Appcircle CodePush auth URL. Leave it empty if you do not use self-hosted server."
   helpText:
