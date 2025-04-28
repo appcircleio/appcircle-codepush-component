@@ -10,12 +10,12 @@ def env_has_key(key)
 end
 
 project_path = env_has_key('AC_REPOSITORY_DIR')
-server_url = env_has_key('AC_CODE_PUSH_SERVER_URL')
-auth_url = env_has_key('AC_CODE_PUSH_AUTH_URL')
 access_token = env_has_key('AC_CODE_PUSH_TOKEN')
 app_name = env_has_key('AC_CODE_PUSH_APP_NAME')
 platform_type = %w[apk aab].include?(ENV['AC_OUTPUT_TYPE']&.downcase) ? 'android' : 'ios'
 target_version = env_has_key('AC_CODE_PUSH_TARGET_BINARY_VERSION')
+server_url = get_env_variable('AC_CODE_PUSH_SERVER_URL') || "https://dev-api.appcircle.io/codepush"
+auth_url = get_env_variable('AC_CODE_PUSH_AUTH_URL') || "https://dev-auth.appcircle.io"
 description = get_env_variable('AC_CODE_PUSH_DESCRIPTION')
 deployment_name = get_env_variable('AC_CODE_PUSH_DEPLOYMENT_NAME')
 rollout_percentage = get_env_variable('AC_CODE_PUSH_ROLLOUT_PERCENTAGE')
