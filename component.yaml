@@ -13,7 +13,7 @@ inputs:
   defaultValue: "$AC_CODE_PUSH_TOKEN"
   isRequired: true
   title: Appcircle Personal Access Token
-  description: "Appcircle personal access token. You can create a new token in the Appcircle dashboard under `Settings > Security > Personal Access Token`. For details, see [Generating and Managing Personal API Tokens](/appcircle-api-and-cli/api-authentication#generatingmanaging-the-personal-api-tokens)."
+  description: "Appcircle personal access token. You can create a new token in the Appcircle dashboard under `Settings > Security > Personal Access Token`. For details, see [Generating and Managing Personal API Tokens](https://docs.appcircle.io/appcircle-api-and-cli/api-authentication#generatingmanaging-the-personal-api-tokens)."
   helpText:
 - key: "AC_CODE_PUSH_SERVER_URL"
   defaultValue: "$AC_CODE_PUSH_SERVER_URL"
