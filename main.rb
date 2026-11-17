@@ -44,7 +44,9 @@ def run_command(cmd)
 end
 
 
-run_command("sudo npm install -g @appcircle/codepush-cli")
+# Linux runners run as root and may have no sudo; the macOS runner needs it for a global install.
+sudo = Process.uid.zero? ? '' : 'sudo '
+run_command("#{sudo}npm install -g @appcircle/codepush-cli")
 
 if !server_url.to_s.empty? && !auth_url.to_s.empty?
   login_cmd = "#{code_push} login --accessKey #{access_token} --serverUrl #{server_url} --authUrl #{auth_url}"
